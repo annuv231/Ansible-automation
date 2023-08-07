@@ -28,3 +28,7 @@ check version using
 
 `server1 ansible_host=192.168.1.100 ansible_user=ubuntu`
 `server2 ansible_host=example.com ansible_user=admin`
+
+to run a playbook
+ ansible-playbook playbook-pingtest.yaml -i inventory.txt
+![image](https://github.com/annuv231/Ansible-automation/assets/33187053/a814982a-a88e-4cfc-b33b-c81c95096cd1)
