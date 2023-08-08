@@ -1,0 +1,17 @@
+---
+- name: 'Test connectivity to target servers'
+  hosts: all
+  become: yes
+  tasks:
+    - name: 'Ping test'
+      ping:
+
+    - name: 'make a new directory'
+      file:
+        path: /home/osboxes/amlendra
+        state: directory
+        mode: '0755'
+
+  vars:
+    ansible_become_pass: osboxes.org
+

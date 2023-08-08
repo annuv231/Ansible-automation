@@ -1,0 +1,14 @@
+---
+- name: Change timezone on agents
+  hosts: all
+  become: true
+
+  tasks:
+    - name: Set timezone
+      timezone:
+        name: Asia/Kolkata
+
+    - name: Sync time with NTP servers
+      command: ntpdate pool.ntp.org  
+  vars: 
+    ansible_become_pass: osboxes.org
